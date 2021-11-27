@@ -1,18 +1,6 @@
 import { Price } from "./Price";
 
-type Props = {
-  name: string;
-  selected: boolean;
-  price: number;
-  onChange: (selectedValue: boolean) => void;
-};
-
-export function BooleanChoice({
-  name,
-  selected,
-  price,
-  onChange,
-}: Props): JSX.Element {
+export function BooleanChoice({ name, selected, price, onChange }) {
   return (
     <div>
       <h4 className="choice-name">{name}</h4>

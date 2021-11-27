@@ -1,18 +1,6 @@
 import { Price } from "./Price";
 
-type Props = {
-  name: string;
-  options: Array<{ name: string; price: number }>;
-  selected: number;
-  onSelect: (selectedValue: number) => void;
-};
-
-export function VerticalChoice({
-  name,
-  options,
-  selected,
-  onSelect,
-}: Props): JSX.Element {
+export function VerticalChoice({ name, options, selected, onSelect }) {
   // on récupère l'option selectionnée
   const selectedPrice = options[selected].price;
 

@@ -6,13 +6,8 @@ const formatter = new Intl.NumberFormat("fr-FR", {
   maximumFractionDigits: 2,
 });
 
-type Props = {
-  value: number;
-  noSign?: boolean;
-};
-
 // Ce composant format un nombre pour afficher un prix
-export function Price({ value, noSign = false }: Props): JSX.Element | null {
+export function Price({ value, noSign = false }) {
   let prefix = "+";
   if (value < 0) {
     prefix = "-";
